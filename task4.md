@@ -1,48 +1,44 @@
-# **The C code should undergo the simulation of normal GCC X86 Compiler and riscv compiler** (**SPIKE Simulation**) 
+**Execution of the Task 4**
 
-**AS PER THE REQUIREMENT OUTPUT OF GCC (F1) SHOULD BE EQUAL = TO OUTPUT OF RISCV GCC (F2)**
+**Use the following instructions to get the gtkwave window**
 
-![WhatsApp Image](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/b443f806-47d8-41da-8bfb-bdce83bff75d)
+we have saved the files in presynthsimulation folder
 
-**Step - 1**: To Run the code in the normal GCC Compiler</p>
+iverilog chaithra.v chaithra_tb.v - to simulate the verilog code and to check the errors
 
+./a.out - to get the output and make vcd file to be ready open
 
-  To compile the code: 
-            
-        gcc sum1ton.c -o sum1ton
-   To Get the output use:
-       
-       ./a.out
-  Here the output finds to be -Sum of numbers from 1 to 250 is 31375
+  ![t41](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/c955317b-f6f9-49ae-8b76-f6f5d50e0e6d)
 
-![WhatsApp Image 1](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/0a7b3613-3b70-4d0f-8c14-6c0086ceb7bb)
+  ![t42](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/da34bed5-3422-49fb-9cb7-5a7a779bdd87)
 
-**Step - 2**: To Run the code in the RISC-V GCC Compiler</p>
-To compile the code :</p>
+  **after running the command
+   gtkwave chaithra.vcd**
 
-    riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-    gcc sum1ton.c -o sum1ton
-    ./sum1ton
- Here the output finds to be -Sum of numbers from 1 to 250 is 31375</p>
+   ![t43](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/ba644597-9c50-4295-98be-41cfedc95ad6)
 
-  ![WhatsApp Image 2](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/a980e344-c309-4913-92df-a28b1f0a8717)
+   **Lets move on to the execution Stage with Waveforms obtained for running the gtkwave chaithra.vcd**
 
-   To compile the code:
-  
-    riscv64-unknown-elf-gcc -o sum1ton sum1ton.c
-  or
-    
-    riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
-  or
+   1. When instantiated module is selected we get all the registers and wires as shown in the below figure
+      
+  ![t44](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/82daac58-59c3-41e7-8c73-a4f8a5e3528c)
 
-    riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o sum1ton.o sum1ton.c
- (by referring the image given below) </p>
- To Get the output use:
+  2. Upon adding few signals the waves can be see as shown in the below figure
 
-    ./a.out
- Here the output also finds to be -Sum of numbers from 1 to 250 is 31375
+![t45](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/e1327d4f-844c-4f54-b1aa-465fdde8c3fa)
 
-![WhatsApp Image 3](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/924f4cd4-ef3e-4424-91c0-010fcc0db36a)
+**Output showing the ADD Operation**
+![t46](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/1cd147f0-03f0-4b66-9acc-a25cf699a783)
 
- 
+**Output showing the AND Operation**
+![and](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/0a4c1990-b390-4aa5-9e61-f1782d51f8dc)
+
+**Output showing the SUB Operation**
+![t48](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/c025dec8-08dc-4a87-a5b4-ca1bf05d26ee)
+
+**Output showing the OR Operation**
+![t49](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/57045017-1c2c-4426-8b21-7a4fc0614a2e)
+
+![t410](https://github.com/ChaithraDgitub/chaithrad/assets/160298555/62216fd6-b804-44e7-ad6b-f97818029588)
+
 
